@@ -6,43 +6,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class = "score">
+    <score>Your score is:  <span id="scorescore"></span></score>
+  </div>
+  <div class = "result">
+    <result><span id="resultresult"></span></result>
+  </div>
   <div class = "controls">
     <div class = "key"></div>
-      <kbd>rock</kbd>
+      <button class = "btn" id="rock">rock</button>
     <div class = "key"></div>
-      <kbd>paper</kbd>
+      <button class = "btn" id="paper">paper</button>
     <div class = "key"></div>
-      <kbd>scissors</kbd>
+      <button class = "btn" id="scissors">scissors</button>
   </div>
-  <script>
-      function computerPlay() {
-        var number = Math.random() * (3 - 1) + 1;
-        var x = Math.round(number);
-
-        if (x == 1) {
-          return "rock";
-        } else if (x == 2) {
-          return "scissors";
-        } else  if (x == 3){
-          return "paper";
-        };
-      };
-      var cchoice = computerPlay();
-      //var pchoice = prompt("").toLowerCase();
-
-      if (pchoice == cchoice) {
-          console.log(`You chose ${pchoice} and the computer chose ${cchoice}, it's a tie!`);
-      } else if (pchoice == "rock" && cchoice == "scissors"){
-          console.log(`You chose ${pchoice} and the computer chose ${cchoice}, you win!`);
-      } else if (pchoice == "scissors" && cchoice == "paper") {
-          console.log(`You chose ${pchoice} and the computer chose ${cchoice}, you win!`);
-      } else if (pchoice == "paper" && cchoice == "rock") {
-          console.log(`You chose ${pchoice} and the computer chose ${cchoice}, you win!`);
-      } else {
-          console.log(`You chose ${pchoice} and the computer chose ${cchoice}, you lose!`);
-      };
-      
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
