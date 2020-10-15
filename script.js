@@ -11,7 +11,7 @@ function computerPlay() {
     };
   };
 
-  var cchoice = computerPlay();
+
   
 
  
@@ -31,9 +31,12 @@ scissors.addEventListener('click', () => {
   playgame("scissors");
 });
 
+var myScore = 0;
+var roundnumber = 0;
 
 function playgame(pchoice) {
-    var myScore = 0;
+    
+    var cchoice = computerPlay();
 
     if (pchoice == cchoice) {
         resultr = `You chose ${pchoice} and the computer chose ${cchoice}, it's a tie!`;
@@ -51,7 +54,10 @@ function playgame(pchoice) {
         myScore -=1;
     };
 
+    roundnumber += 1;
     document.getElementById("scorescore").innerHTML = myScore;
     document.getElementById("resultresult").innerHTML = resultr;
-}
+    document.getElementById("round").innerHTML = roundnumber;
+};
+
 
